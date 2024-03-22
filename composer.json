@@ -1,0 +1,15 @@
+{
+    "name": "thiriwin/ecommerce",
+    "autoload": {
+        "psr-4": {
+            "Thiriwin\\Ecommerce\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Thiri Win",
+            "email": "thiriwinzhuang@gmail.com"
+        }
+    ],
+    "require": {}
+}

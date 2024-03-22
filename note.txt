@@ -1,0 +1,6 @@
+create folder
+composer init in command line
+
+create libs/Database.php
+create classes
+prepare frontend
