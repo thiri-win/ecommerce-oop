@@ -6,5 +6,7 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'libs\\' => array($baseDir . '/libs'),
+    'classes\\' => array($baseDir . '/classes'),
     'Thiriwin\\Ecommerce\\' => array($baseDir . '/src'),
 );

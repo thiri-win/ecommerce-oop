@@ -7,6 +7,14 @@ namespace Composer\Autoload;
 class ComposerStaticInit33aa26aec39f20a04446a7730200668d
 {
     public static $prefixLengthsPsr4 = array (
+        'l' => 
+        array (
+            'libs\\' => 5,
+        ),
+        'c' => 
+        array (
+            'classes\\' => 8,
+        ),
         'T' => 
         array (
             'Thiriwin\\Ecommerce\\' => 19,
@@ -14,6 +22,14 @@ class ComposerStaticInit33aa26aec39f20a04446a7730200668d
     );
 
     public static $prefixDirsPsr4 = array (
+        'libs\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/libs',
+        ),
+        'classes\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/classes',
+        ),
         'Thiriwin\\Ecommerce\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',

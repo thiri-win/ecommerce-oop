@@ -2,7 +2,9 @@
     "name": "thiriwin/ecommerce",
     "autoload": {
         "psr-4": {
-            "Thiriwin\\Ecommerce\\": "src/"
+            "Thiriwin\\Ecommerce\\": "src/",
+            "libs\\": "libs/",
+            "classes\\": "classes/"
         }
     },
     "authors": [
