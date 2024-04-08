@@ -22,7 +22,7 @@ class Database
         $this->dbhost = $dbhost;
         $this->dbname = $dbname;
         $this->dbusername = $dbusername;
-        $this->$dbpassword = $dbpassword;
+        $this->dbpassword = $dbpassword;
     }
 
     public function connect()
