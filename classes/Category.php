@@ -2,7 +2,6 @@
 
 namespace classes;
 
-include '../vendor/autoload.php';
 use libs\Database;
 
 class Category extends Database

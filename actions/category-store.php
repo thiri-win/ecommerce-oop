@@ -13,5 +13,5 @@ if(empty($title)) {
     $category->store([
         'title' => $title
     ]);
-    header('location: ../admin.php');
+    header('location: ../category-index.php');
 }
