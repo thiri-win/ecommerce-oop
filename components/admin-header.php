@@ -27,7 +27,7 @@
                     </a>
                     <ul class="navbar-nav">
                         <li class="nav-item"><a href="category-index.php" class="nav-link">Category</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Product</a></li>
+                        <li class="nav-item"><a href="product-index.php" class="nav-link">Product</a></li>
                         <li class="nav-item"><a href="#" class="nav-link">Carts</a></li>
                     </ul>
                 </nav>

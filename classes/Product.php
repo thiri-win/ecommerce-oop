@@ -4,8 +4,6 @@ namespace classes;
 
 use libs\Database;
 
-include '../vendor/autoload.php';
-
 class Product extends Database
 {
 
@@ -43,16 +41,13 @@ class Product extends Database
 
     public function update($data=[])
     {
-        $query = "UPDATE products SET name=:name, category_id=:category_id, price=:price, about=:about, image=:image WHERE id=:id";
+        if(isset($data['image'])) {
+            $query = "UPDATE products SET name=:name, category_id=:category_id, price=:price, about=:about, image=:image WHERE id=:id";
+        } else {
+            $query = "UPDATE products SET name=:name, category_id=:category_id, price=:price, about=:about WHERE id=:id";
+        }
         $result = $this->connect()->prepare($query);
-        $result->execute([
-            ':id' => $data['id'],
-            ':name' => $data['name'],
-            ':category_id' => $data['category_id'],
-            ':price' => $data['price'],
-            ':about' => $data['about'],
-            ':image' => $data['image'],
-        ]);
+        $result->execute($data);
         return $result->rowCount();
     }
 
