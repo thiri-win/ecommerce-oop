@@ -1,3 +1,14 @@
+<?php
+
+include "vendor/autoload.php";
+
+use classes\Product;
+
+$items = new Product();
+$products = $items->all();
+
+?>
+
 <?php include 'components/header.php'; ?>
 
 <!-- shop section -->
@@ -10,206 +21,29 @@
             </h2>
         </div>
         <div class="row">
+            <?php foreach($products as $product): ?>
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="box">
                     <a href="">
                         <div class="img-box">
-                            <img src="images/p1.png" alt="">
+                            <img src="<?= $product['image'] ?>" alt="">
                         </div>
                         <div class="detail-box">
-                            <h6>
-                                Necklace
-                            </h6>
-                            <h6>
-                                Price
-                                <span>
-                                    $200
-                                </span>
+                            <h6><?= $product['name'] ?></h6>
+                            <h6>Price
+                                <span><?= $product['price'] ?></span>
                             </h6>
                         </div>
+                        <div class="border text-center p-2 bg-white rounded mt-2">
+                            <h6 class="mb-0"><i class="fas fa-cart-arrow-down"></i> Add to Cart</h6>
+                        </div>
                         <div class="new">
-                            <span>
-                                New
-                            </span>
+                            <span>New</span>
                         </div>
                     </a>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="box">
-                    <a href="">
-                        <div class="img-box">
-                            <img src="images/p2.png" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h6>
-                                Necklace
-                            </h6>
-                            <h6>
-                                Price
-                                <span>
-                                    $300
-                                </span>
-                            </h6>
-                        </div>
-                        <div class="new">
-                            <span>
-                                New
-                            </span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="box">
-                    <a href="">
-                        <div class="img-box">
-                            <img src="images/p3.png" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h6>
-                                Necklace
-                            </h6>
-                            <h6>
-                                Price
-                                <span>
-                                    $110
-                                </span>
-                            </h6>
-                        </div>
-                        <div class="new">
-                            <span>
-                                New
-                            </span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="box">
-                    <a href="">
-                        <div class="img-box">
-                            <img src="images/p4.png" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h6>
-                                Ring
-                            </h6>
-                            <h6>
-                                Price
-                                <span>
-                                    $45
-                                </span>
-                            </h6>
-                        </div>
-                        <div class="new">
-                            <span>
-                                New
-                            </span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="box">
-                    <a href="">
-                        <div class="img-box">
-                            <img src="images/p5.png" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h6>
-                                Ring
-                            </h6>
-                            <h6>
-                                Price
-                                <span>
-                                    $95
-                                </span>
-                            </h6>
-                        </div>
-                        <div class="new">
-                            <span>
-                                New
-                            </span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="box">
-                    <a href="">
-                        <div class="img-box">
-                            <img src="images/p6.png" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h6>
-                                Earrings
-                            </h6>
-                            <h6>
-                                Price
-                                <span>
-                                    $70
-                                </span>
-                            </h6>
-                        </div>
-                        <div class="new">
-                            <span>
-                                New
-                            </span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="box">
-                    <a href="">
-                        <div class="img-box">
-                            <img src="images/p7.png" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h6>
-                                Earrings
-                            </h6>
-                            <h6>
-                                Price
-                                <span>
-                                    $400
-                                </span>
-                            </h6>
-                        </div>
-                        <div class="new">
-                            <span>
-                                New
-                            </span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="box">
-                    <a href="">
-                        <div class="img-box">
-                            <img src="images/p8.png" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h6>
-                                Necklace
-                            </h6>
-                            <h6>
-                                Price
-                                <span>
-                                    $450
-                                </span>
-                            </h6>
-                        </div>
-                        <div class="new">
-                            <span>
-                                New
-                            </span>
-                        </div>
-                    </a>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
         <div class="btn-box">
             <a href="#">

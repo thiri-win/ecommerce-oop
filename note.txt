@@ -4,3 +4,10 @@ composer init in command line
 create libs/Database.php
 create classes
 prepare frontend
+
+
+
+30daysJS
+github repo 
+
+git commit
